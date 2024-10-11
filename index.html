@@ -5,8 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>toDo</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
+    <section class="container">
+      <div class="feedback alert">write value for item name</div>
+      <form id="itemForm" action="">
+        <h3>to do list</h3>
+        <div class="input-group">
+          <input type="text" id="itemInput" placeholder="name..." />
+          <button id="addItem" class="btn" type="submit">add item</button>
+        </div>
+      </form>
+      <div class="item-container">
+        <div class="item-list">
+          <div class="item">
+            <div class="item-info">
+              <h6 class="item-index">1</h6>
+              <p class="item-name">item one</p>
+            </div>
+          </div>
+          <div class="item-icon">
+            <i class="far fa-check-circle complete-item"></i>
+            <i class="far fa-edit edit-item"></i>
+            <i class="far fa-times-circle delete-item"></i>
+          </div>
+        </div>
+        <button type="button" class="btn" id="clearList">clear item</button>
+      </div>
+    </section>
     <script src="script.js"></script>
   </body>
 </html>
