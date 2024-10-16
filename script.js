@@ -23,33 +23,27 @@ const makeList = function (todoItem) {
     //     </div>
     //   </div>`
     // );
-    // Assuming itemList is a reference to your container element
+
     const itemDiv = document.createElement("div");
     itemDiv.classList.add("item");
 
-    // Create item-info div
     const itemInfoDiv = document.createElement("div");
     itemInfoDiv.classList.add("item-info");
 
-    // Create h6 element for item index
     const itemIndex = document.createElement("h6");
     itemIndex.classList.add("item-index");
-    itemIndex.textContent = index + 1; // Set the index
+    itemIndex.textContent = index + 1;
 
-    // Create p element for item name
     const itemName = document.createElement("p");
     itemName.classList.add("item-name");
-    itemName.textContent = value; // Set the value
+    itemName.textContent = value;
 
-    // Append h6 and p to item-info div
     itemInfoDiv.appendChild(itemIndex);
     itemInfoDiv.appendChild(itemName);
 
-    // Create item-icon div
     const itemIconDiv = document.createElement("div");
     itemIconDiv.classList.add("item-icon");
 
-    // Create icons
     const completeIcon = document.createElement("i");
     completeIcon.classList.add("far", "fa-check-circle", "complete-item");
 
@@ -59,16 +53,13 @@ const makeList = function (todoItem) {
     const deleteIcon = document.createElement("i");
     deleteIcon.classList.add("far", "fa-times-circle", "delete-item");
 
-    // Append icons to item-icon div
     itemIconDiv.appendChild(completeIcon);
     itemIconDiv.appendChild(editIcon);
     itemIconDiv.appendChild(deleteIcon);
 
-    // Append item-info and item-icon divs to the main item div
     itemDiv.appendChild(itemInfoDiv);
     itemDiv.appendChild(itemIconDiv);
 
-    // Finally, append the itemDiv to the itemList
     itemList.appendChild(itemDiv);
     handleItem(value);
   });
